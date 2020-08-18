@@ -2,6 +2,7 @@ import sys
 import os
 from pathlib import Path
 from argparse import ArgumentParser
+import re
 
 import qrcode
 
@@ -35,7 +36,8 @@ if args_min>args_max:
     sys.exit(1)
 
 # 本処理
-output_dir = Path('./output')
+escaped_content = re.sub(r'[\\/:*?"<>|]+', '', content)
+output_dir = Path('./output') / escaped_content
 os.makedirs(str(output_dir), exist_ok=True)
 for s in range(args_min, args_max+1, 1):
     qr = qrcode.QRCode(
