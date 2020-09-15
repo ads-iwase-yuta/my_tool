@@ -67,5 +67,11 @@ print('定期代: {} 円/月'.format(passprice))
 # どちらが得か算出
 div_day = passprice/(fare*2)
 div_day = int(div_day)
-print('{}日以下: 定期じゃないほうがお得'.format(div_day))
-print('{}日以上: 定期のほうがお得'.format(div_day+1))
+mod = passprice%(fare*2)
+if mod>0:
+    print('{}日以下: 定期じゃないほうがお得'.format(div_day))
+    print('{}日以上: 定期のほうがお得'.format(div_day+1))
+else:
+    print('{}日以下: 定期じゃないほうがお得'.format(div_day-1))
+    print('{}日: どちらも同じ'.format(div_day))
+    print('{}日以上: 定期のほうがお得'.format(div_day+1))
