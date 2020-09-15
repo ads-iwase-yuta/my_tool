@@ -1,6 +1,6 @@
-# QR Code Generator
+# Fare Calc
 
-QRコードを作成するPythonのプログラムです。
+指定した区間の運賃・定期代を取得し、定期を買うほうが得・損か判定します。
 
 ## 環境構築
 * Python環境
