@@ -1,1 +1,1 @@
-openssl aes-256-cbc -d -in encrypted
+openssl aes-256-cbc -d -iter 100 -in encrypted
