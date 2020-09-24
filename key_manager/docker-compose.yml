@@ -1,0 +1,15 @@
+version: '3.5'
+
+
+services:
+
+  key-manager:
+    image: key-manager
+    container_name: key-manager
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./work/:/work/
+    working_dir: /work/
+    tty: true

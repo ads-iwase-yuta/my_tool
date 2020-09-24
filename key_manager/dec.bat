@@ -1,0 +1,1 @@
+docker-compose run key-manager bash dec.sh
